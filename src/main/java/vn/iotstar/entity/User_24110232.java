@@ -19,7 +19,7 @@ public class User_24110232 implements Serializable {
     @Column(name = "Phone", length = 15)
     private String phone;
 
-    @Column(name = "Fullname", length = 50)
+    @Column(name = "Fullname", columnDefinition = "NVARCHAR(50)")
     private String fullname;
 
     @Column(name = "Email", length = 150)

@@ -14,7 +14,10 @@ public class Order_24110232 implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderId;
     
+    @Column(columnDefinition = "NVARCHAR(255)")
     private String customerName;
+    
+    @Column(columnDefinition = "NVARCHAR(255)")
     private String address;
     private String phone;
     private String paymentMethod; // e.g. "COD"
@@ -23,6 +26,10 @@ public class Order_24110232 implements Serializable {
     private Date orderDate;
     
     private int status; // 0: pending
+    
+    @ManyToOne
+    @JoinColumn(name = "username")
+    private User_24110232 user;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderDetail_24110232> orderDetails;
@@ -43,4 +50,6 @@ public class Order_24110232 implements Serializable {
     public void setStatus(int status) { this.status = status; }
     public List<OrderDetail_24110232> getOrderDetails() { return orderDetails; }
     public void setOrderDetails(List<OrderDetail_24110232> orderDetails) { this.orderDetails = orderDetails; }
+    public User_24110232 getUser() { return user; }
+    public void setUser(User_24110232 user) { this.user = user; }
 }

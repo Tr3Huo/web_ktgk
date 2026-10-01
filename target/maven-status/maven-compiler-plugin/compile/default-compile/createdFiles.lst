@@ -1,12 +1,15 @@
+vn\iotstar\dao\impl\OrderDaoImpl_24110232.class
 vn\iotstar\entity\Category_24110232.class
 vn\iotstar\service\impl\VideoServiceImpl_24110232.class
 vn\iotstar\controller\admin\AdminHomeController_24110232.class
 vn\iotstar\entity\Share_24110232.class
+vn\iotstar\FixData.class
 vn\iotstar\util\EmailUtil_24110232.class
 vn\iotstar\service\IVideoService_24110232.class
 vn\iotstar\controller\LoginController_24110232.class
 vn\iotstar\entity\Video_24110232.class
 vn\iotstar\dao\impl\VideoDaoImpl_24110232.class
+vn\iotstar\dao\IOrderDao_24110232.class
 vn\iotstar\dao\impl\UserDaoImpl_24110232.class
 vn\iotstar\entity\User_24110232.class
 vn\iotstar\service\impl\CategoryServiceImpl_24110232.class
@@ -16,6 +19,7 @@ vn\iotstar\controller\VerifyOtpController_24110232.class
 vn\iotstar\controller\ProductController_24110232.class
 vn\iotstar\util\EmailUtil_24110232$1.class
 vn\iotstar\service\IUserService_24110232.class
+vn\iotstar\controller\OrderHistoryController_24110232.class
 vn\iotstar\controller\HomeController_24110232.class
 vn\iotstar\dao\ICategoryDao_24110232.class
 vn\iotstar\controller\CheckoutController_24110232.class
@@ -24,6 +28,7 @@ vn\iotstar\service\impl\UserServiceImpl_24110232.class
 vn\iotstar\controller\RegisterController_24110232.class
 vn\iotstar\dao\IUserDao_24110232.class
 vn\iotstar\entity\Favorite_24110232.class
+vn\iotstar\service\impl\OrderServiceImpl_24110232.class
 vn\iotstar\controller\CartController_24110232.class
 vn\iotstar\dao\IVideoDao_24110232.class
 vn\iotstar\controller\admin\VideoAdminController_24110232.class
@@ -32,3 +37,4 @@ vn\iotstar\service\ICategoryService_24110232.class
 vn\iotstar\controller\VideoDetailController_24110232.class
 vn\iotstar\entity\OrderDetail_24110232.class
 vn\iotstar\controller\LogoutController_24110232.class
+vn\iotstar\service\IOrderService_24110232.class

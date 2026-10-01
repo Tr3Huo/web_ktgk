@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 
 import vn.iotstar.entity.Order_24110232;
 import vn.iotstar.entity.OrderDetail_24110232;
+import vn.iotstar.entity.User_24110232;
 import vn.iotstar.model.CartItem;
 import vn.iotstar.util.JPAConfig_24110232;
 
@@ -65,6 +66,17 @@ public class CheckoutController_24110232 extends HttpServlet {
             order.setPaymentMethod(paymentMethod);
             order.setOrderDate(new Date());
             order.setStatus(0); // Pending
+            
+            User_24110232 loggedInUser = (User_24110232) session.getAttribute("account");
+            if(loggedInUser != null) {
+                order.setUser(loggedInUser);
+                // Cập nhật số điện thoại cho user nếu chưa có
+                if(loggedInUser.getPhone() == null || loggedInUser.getPhone().isEmpty()) {
+                    loggedInUser.setPhone(phone);
+                    enma.merge(loggedInUser);
+                    session.setAttribute("account", loggedInUser);
+                }
+            }
             
             List<OrderDetail_24110232> details = new ArrayList<>();
             for (CartItem item : cart.values()) {
